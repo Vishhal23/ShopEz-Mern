@@ -18,7 +18,7 @@ ShopEZ is a modern, full-stack e-commerce application designed with a clean sepa
 - **Database ORM**: Mongoose connecting to MongoDB.
 - **Authentication**: JWT (JSON Web Tokens) for secure, stateless sessions.
 - **Security**: bcryptjs for hashing user passwords before database storage.
-- **Middleware**: CORS (Cross-Origin Resource Sharing), Cookie Parser, and Dotenv for environment configuration.
+- **Middleware**: body-parser (request body parsing), CORS (Cross-Origin Resource Sharing), Cookie Parser, and Dotenv for environment configuration.
 
 ---
 
@@ -31,7 +31,7 @@ ShopEz-main/
 ├── client/                     # React + Vite Frontend Application
 │   ├── src/
 │   │   ├── components/         # Reusable UI Components
-│   │   │   ├── common/         # Spinners, Skeletons, etc.
+│   │   │   ├── common/         # Logo, Spinners, Skeletons, etc.
 │   │   │   ├── layout/         # MainLayout, Navbar, Sidebar
 │   │   │   └── products/       # ProductCard, ProductGrid
 │   │   ├── context/            # React Global States
@@ -77,6 +77,7 @@ ShopEz-main/
 │   │   ├── auth.js              # Protect (JWT) & adminOnly access filters
 │   │   └── errorHandler.js      # Express global exception handler
 │   ├── models/                 # Mongoose Schemas (Data Layer)
+│   │   ├── Admin.js             # Landing banners & administrative config
 │   │   ├── CartItem.js          # Cart items referencing Product & User
 │   │   ├── Category.js          # Categories list schema
 │   │   ├── Order.js             # Order receipt metadata & shipping schema
@@ -90,7 +91,7 @@ ShopEz-main/
 │   │   ├── orderRoutes.js
 │   │   └── productRoutes.js
 │   ├── .env                    # Local environment config variables
-│   ├── index.js                # App server starter & DB connector
+│   ├── server.js               # App server starter & DB connector (renamed from index.js)
 │   ├── package.json            # Backend dependencies & scripts
 │   └── seed.js                 # Database seeding script for local/cloud DB
 │
@@ -100,7 +101,7 @@ ShopEz-main/
 
 ---
 
-## 🇮🇳 Indian localization Features
+## 🇮🇳 Indian Localization Features
 
 The application is fully customized for Indian shoppers and store administrators:
 1. **Indian Rupee (₹) Currency**: Price indicators throughout the client (Product Cards, Details, Cart, Checkout, Order Receipt, and Admin logs) display prices in Indian Rupees (`₹`).
@@ -112,6 +113,15 @@ The application is fully customized for Indian shoppers and store administrators
    - Pincodes undergo a strict 6-digit validation check.
 4. **Number Formatting**:
    - Revenue figures on the Admin Dashboard are formatted in accordance with the Indian numbering system (e.g. using `en-IN` to group numbers like `₹1,50,000` rather than `₹150,000`).
+
+---
+
+## 🎨 Creative Branding & Premium Design
+
+1. **Integrated Brand Logo (`client/src/components/common/Logo.tsx`)**:
+   - Features a custom vector design representing a shopping bag outline merged with a stylized Indian Rupee (`₹`) symbol.
+   - Accented with a modern Indian tricolor gradient (saffron-white-emerald) on the bag handle and dynamic gold-to-emerald gradient lettering on the logo brand name text.
+   - Implemented across the navigation header, footer, login page, and sign-up screens for brand uniformity.
 
 ---
 
