@@ -7,7 +7,7 @@ import { Search, ChevronDown, Eye } from 'lucide-react';
 
 const statusColors: Record<string, string> = {
   pending: 'bg-yellow-100 text-yellow-800',
-  confirmed: 'bg-violet-100 text-violet-800',
+  confirmed: 'bg-emerald-100 text-emerald-800',
   packed: 'bg-purple-100 text-purple-800',
   shipped: 'bg-indigo-100 text-indigo-800',
   delivered: 'bg-green-100 text-green-800',
@@ -76,14 +76,14 @@ export function AdminOrders() {
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="Search by order ID..."
-              className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
+              className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-emerald-500"
             />
           </div>
           <div className="relative">
             <select
               value={statusFilter}
               onChange={e => setStatusFilter(e.target.value)}
-              className="appearance-none px-4 py-2 border rounded-lg pr-10 focus:ring-2 focus:ring-violet-500"
+              className="appearance-none px-4 py-2 border rounded-lg pr-10 focus:ring-2 focus:ring-emerald-500"
             >
               <option value="">All Statuses</option>
               {statusOptions.map(status => (
@@ -150,7 +150,7 @@ export function AdminOrders() {
                       <td className="px-6 py-4 text-right">
                         <button
                           onClick={() => setSelectedOrder(order)}
-                          className="p-2 text-violet-600 hover:bg-violet-50 rounded-lg"
+                          className="p-2 text-emerald-600 hover:bg-emerald-50 rounded-lg"
                         >
                           <Eye className="w-5 h-5" />
                         </button>
@@ -191,7 +191,7 @@ export function AdminOrders() {
                       onClick={() => updateStatus(selectedOrder.id, status as Order['status'])}
                       className={`px-3 py-1 text-sm rounded-lg border transition-colors ${
                         selectedOrder.status === status
-                          ? 'bg-violet-600 text-white border-violet-600'
+                          ? 'bg-emerald-600 text-white border-emerald-600'
                           : 'bg-white text-gray-700 hover:bg-gray-50'
                       }`}
                     >

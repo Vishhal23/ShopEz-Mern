@@ -46,7 +46,7 @@ export function ProfilePage() {
 
         <div className="bg-white rounded-lg shadow-sm overflow-hidden">
           {/* Profile Header */}
-          <div className="bg-gradient-to-r from-violet-600 to-violet-700 px-6 py-12 text-white">
+          <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 px-6 py-12 text-white">
             <div className="flex items-center gap-6">
               <div className="relative">
                 {displayAvatar ? (
@@ -66,7 +66,7 @@ export function ProfilePage() {
               </div>
               <div>
                 <h2 className="text-2xl font-bold">{displayName}</h2>
-                <p className="text-violet-100">{user.email}</p>
+                <p className="text-emerald-100">{user.email}</p>
                 <span className="inline-block mt-2 px-3 py-1 bg-white/20 rounded-full text-sm capitalize">
                   {user.role}
                 </span>
@@ -84,7 +84,7 @@ export function ProfilePage() {
                   type="text"
                   value={fullName}
                   onChange={e => setFullName(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
               </div>
             </div>
@@ -112,7 +112,7 @@ export function ProfilePage() {
                   value={phone}
                   onChange={e => setPhone(e.target.value)}
                   placeholder="Enter phone number"
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
                 />
               </div>
             </div>
@@ -139,7 +139,7 @@ export function ProfilePage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+              className="w-full py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>

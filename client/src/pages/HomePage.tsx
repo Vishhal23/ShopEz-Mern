@@ -84,12 +84,12 @@ export function HomePage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-lg">
-            <span className="inline-block px-4 py-1 bg-violet-600 text-sm font-medium rounded-full mb-4">
+            <span className="inline-block px-4 py-1 bg-emerald-600 text-sm font-medium rounded-full mb-4">
               New Arrivals
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Shop the Best <br />
-              <span className="text-violet-400">Quality Products</span>
+              <span className="text-emerald-400">Quality Products</span>
             </h1>
             <p className="text-gray-300 text-lg mb-8">
               Discover amazing deals on electronics, fashion, home appliances, and more.
@@ -98,7 +98,7 @@ export function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/products"
-                className="px-8 py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition-colors flex items-center gap-2"
+                className="px-8 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors flex items-center gap-2"
               >
                 Shop Now
                 <ChevronRight className="w-5 h-5" />
@@ -114,80 +114,92 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Features Bar */}
-      <section className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {features.map(feature => (
-              <div key={feature.title} className="flex items-center gap-4">
-                <div className="p-3 bg-violet-50 rounded-lg">
-                  <feature.icon className="w-6 h-6 text-violet-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-gray-900">{feature.title}</h3>
-                  <p className="text-sm text-gray-500">{feature.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Categories */}
-      <section className="py-12">
+      {/* Categories Bar */}
+      <section className="py-12 bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">Shop by Category</h2>
-              <p className="text-gray-500 mt-1">Browse our wide range of categories</p>
+              <h2 className="text-2xl font-black text-gray-900 tracking-tight">Browse Categories</h2>
+              <p className="text-gray-500 text-sm mt-1">Explore our curated collections</p>
             </div>
             <Link
               to="/products"
-              className="text-violet-600 font-medium hover:text-violet-700 flex items-center gap-1"
+              className="text-emerald-600 font-bold hover:text-emerald-700 flex items-center gap-1 text-sm"
             >
               View All
               <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="flex items-center gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-200">
             {categories.map(category => (
               <Link
                 key={category.id}
                 to={`/products?category=${encodeURIComponent(category.name)}`}
-                className="group relative rounded-xl overflow-hidden h-40 bg-gray-100"
+                className="flex flex-col items-center shrink-0 group text-center"
               >
-                {(category.image_url || category.imageUrl) && (
-                  <img
-                    src={category.image_url || category.imageUrl}
-                    alt={category.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
-                )}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="text-white font-semibold">{category.name}</h3>
+                <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-emerald-500 group-hover:border-amber-500 transition-colors p-1 bg-white shadow-sm">
+                  <div className="w-full h-full rounded-full overflow-hidden bg-gray-100">
+                    {(category.image_url || category.imageUrl) && (
+                      <img
+                        src={category.image_url || category.imageUrl}
+                        alt={category.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    )}
+                  </div>
                 </div>
+                <span className="mt-3 text-xs font-bold text-gray-700 group-hover:text-emerald-600 transition-colors">
+                  {category.name}
+                </span>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Hot Deals */}
-      <section className="py-12 bg-gradient-to-r from-red-50 to-orange-50">
+      {/* Featured Products (Moved Up) */}
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
-              <Percent className="w-8 h-8 text-red-500" />
+              <TrendingUp className="w-8 h-8 text-emerald-600" />
               <div>
-                <h2 className="text-2xl font-bold text-gray-900">Hot Deals</h2>
-                <p className="text-gray-500">Limited time offers just for you</p>
+                <h2 className="text-2xl font-black text-gray-900 tracking-tight">Trending Now</h2>
+                <p className="text-gray-500 text-sm mt-1">Most loved by our community</p>
+              </div>
+            </div>
+            <Link
+              to="/products?sort=rating"
+              className="text-emerald-600 font-bold hover:text-emerald-700 flex items-center gap-1 text-sm"
+            >
+              View All
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {loading
+              ? Array.from({ length: 4 }).map((_, i) => <ProductCardSkeleton key={i} />)
+              : featuredProducts.map(product => <ProductCard key={product.id} product={product} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* Hot Deals (Moved Down) */}
+      <section className="py-12 bg-gradient-to-r from-amber-50 to-orange-50 border-y border-amber-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-8">
+            <div className="flex items-center gap-3">
+              <Percent className="w-8 h-8 text-amber-500" />
+              <div>
+                <h2 className="text-2xl font-black text-gray-900 tracking-tight">Flash Deals</h2>
+                <p className="text-gray-500 text-sm mt-1">Grab them before they are gone</p>
               </div>
             </div>
             <Link
               to="/products?deals=true"
-              className="text-red-600 font-medium hover:text-red-700 flex items-center gap-1"
+              className="text-amber-600 font-bold hover:text-amber-700 flex items-center gap-1 text-sm"
             >
               View All Deals
               <ChevronRight className="w-4 h-4" />
@@ -202,30 +214,21 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* Featured Products */}
-      <section className="py-12">
+      {/* Features Bar (Moved Down) */}
+      <section className="bg-white border-b border-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-3">
-              <TrendingUp className="w-8 h-8 text-violet-600" />
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900">Top Rated Products</h2>
-                <p className="text-gray-500">Most loved by our customers</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map(feature => (
+              <div key={feature.title} className="flex items-center gap-4 p-6 rounded-xl bg-gray-50 border border-gray-100 hover:shadow-sm transition-shadow">
+                <div className="p-3 bg-emerald-50 rounded-lg shrink-0">
+                  <feature.icon className="w-6 h-6 text-emerald-600" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-gray-900">{feature.title}</h3>
+                  <p className="text-xs text-gray-500 mt-1">{feature.desc}</p>
+                </div>
               </div>
-            </div>
-            <Link
-              to="/products?sort=rating"
-              className="text-violet-600 font-medium hover:text-violet-700 flex items-center gap-1"
-            >
-              View All
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {loading
-              ? Array.from({ length: 4 }).map((_, i) => <ProductCardSkeleton key={i} />)
-              : featuredProducts.map(product => <ProductCard key={product.id} product={product} />)}
+            ))}
           </div>
         </div>
       </section>
@@ -241,11 +244,11 @@ export function HomePage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
+              className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
             <button
               type="submit"
-              className="px-8 py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition-colors"
+              className="px-8 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors"
             >
               Subscribe
             </button>

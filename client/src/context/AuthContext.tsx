@@ -26,7 +26,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
     const initializeAuth = async () => {
       try {
-        const token = localStorage.getItem('shopez_token');
+        const token = localStorage.getItem('shopeezz_token');
         if (token) {
           const res = await authApi.getProfile();
           if (mounted && res.data) {

@@ -47,7 +47,7 @@ export function LoginPage() {
             </Link>
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Welcome Back</h1>
-          <p className="text-gray-600 mt-2">Sign in to your ShopEZ account</p>
+          <p className="text-gray-600 mt-2">Sign in to your ShopEEZZ account</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -71,7 +71,7 @@ export function LoginPage() {
                   onChange={e => setEmail(e.target.value)}
                   required
                   placeholder="you@example.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-shadow"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-shadow"
                 />
               </div>
             </div>
@@ -89,7 +89,7 @@ export function LoginPage() {
                   onChange={e => setPassword(e.target.value)}
                   required
                   placeholder="Enter your password"
-                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-shadow"
+                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-shadow"
                 />
                 <button
                   type="button"
@@ -104,7 +104,7 @@ export function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>
@@ -120,7 +120,7 @@ export function LoginPage() {
           <div className="mt-6 text-center">
             <p className="text-gray-600">
               Don't have an account?{' '}
-              <Link to="/register" className="text-violet-600 font-medium hover:text-violet-700">
+              <Link to="/register" className="text-emerald-600 font-medium hover:text-emerald-700">
                 Create one
               </Link>
             </p>

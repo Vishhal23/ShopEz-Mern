@@ -75,7 +75,7 @@ export function AdminDashboard() {
       icon: Users,
       change: '+12%',
       positive: true,
-      color: 'bg-violet-500',
+      color: 'bg-emerald-500',
     },
     {
       title: 'Total Products',
@@ -105,7 +105,7 @@ export function AdminDashboard() {
 
   const statusColors: Record<string, string> = {
     pending: 'bg-yellow-100 text-yellow-800',
-    confirmed: 'bg-violet-100 text-violet-800',
+    confirmed: 'bg-emerald-100 text-emerald-800',
     packed: 'bg-purple-100 text-purple-800',
     shipped: 'bg-indigo-100 text-indigo-800',
     delivered: 'bg-green-100 text-green-800',
@@ -168,7 +168,7 @@ export function AdminDashboard() {
         <div className="bg-white rounded-lg shadow-sm p-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-lg font-semibold text-gray-900">Top Categories</h2>
-            <Package className="w-5 h-5 text-violet-500" />
+            <Package className="w-5 h-5 text-emerald-500" />
           </div>
           <div className="h-64 flex items-center justify-center bg-gray-50 rounded-lg">
             <p className="text-gray-400">Chart placeholder - Integration required</p>
@@ -181,7 +181,7 @@ export function AdminDashboard() {
         <div className="p-6 border-b">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold text-gray-900">Recent Orders</h2>
-            <Link to="/admin/orders" className="text-sm text-violet-600 hover:text-violet-700">
+            <Link to="/admin/orders" className="text-sm text-emerald-600 hover:text-emerald-700">
               View all
             </Link>
           </div>

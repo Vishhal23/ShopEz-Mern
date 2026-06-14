@@ -112,7 +112,7 @@ export function ProductDetailPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-2xl font-bold text-gray-900 mt-12">Product not found</h1>
           <p className="text-gray-500 mt-4">The product you're looking for doesn't exist or has been removed.</p>
-          <Link to="/products" className="mt-6 inline-block px-6 py-2 bg-violet-600 text-white rounded-lg">
+          <Link to="/products" className="mt-6 inline-block px-6 py-2 bg-emerald-600 text-white rounded-lg">
             Browse Products
           </Link>
         </div>
@@ -167,7 +167,7 @@ export function ProductDetailPage() {
                       key={index}
                       onClick={() => setSelectedImage(index)}
                       className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-colors ${
-                        selectedImage === index ? 'border-violet-600' : 'border-transparent'
+                        selectedImage === index ? 'border-emerald-600' : 'border-transparent'
                       }`}
                     >
                       <img src={image} alt="" className="w-full h-full object-cover" />
@@ -259,7 +259,7 @@ export function ProductDetailPage() {
                 <button
                   onClick={handleAddToCart}
                   disabled={product.stock === 0}
-                  className="flex-1 py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="flex-1 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   <ShoppingCart className="w-5 h-5" />
                   Add to Cart
@@ -275,22 +275,22 @@ export function ProductDetailPage() {
               {/* Features */}
               <div className="grid grid-cols-3 gap-4 pt-6 border-t">
                 <div className="text-center">
-                  <div className="p-3 bg-violet-50 rounded-full w-fit mx-auto mb-2">
-                    <Truck className="w-5 h-5 text-violet-600" />
+                  <div className="p-3 bg-emerald-50 rounded-full w-fit mx-auto mb-2">
+                    <Truck className="w-5 h-5 text-emerald-600" />
                   </div>
                   <p className="text-xs font-medium text-gray-700">Free Shipping</p>
                   <p className="text-xs text-gray-500">Over ₹500</p>
                 </div>
                 <div className="text-center">
-                  <div className="p-3 bg-violet-50 rounded-full w-fit mx-auto mb-2">
-                    <Shield className="w-5 h-5 text-violet-600" />
+                  <div className="p-3 bg-emerald-50 rounded-full w-fit mx-auto mb-2">
+                    <Shield className="w-5 h-5 text-emerald-600" />
                   </div>
                   <p className="text-xs font-medium text-gray-700">Secure Payment</p>
                   <p className="text-xs text-gray-500">100% Safe</p>
                 </div>
                 <div className="text-center">
-                  <div className="p-3 bg-violet-50 rounded-full w-fit mx-auto mb-2">
-                    <RotateCcw className="w-5 h-5 text-violet-600" />
+                  <div className="p-3 bg-emerald-50 rounded-full w-fit mx-auto mb-2">
+                    <RotateCcw className="w-5 h-5 text-emerald-600" />
                   </div>
                   <p className="text-xs font-medium text-gray-700">Easy Returns</p>
                   <p className="text-xs text-gray-500">30 Days</p>

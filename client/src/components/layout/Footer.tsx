@@ -55,15 +55,15 @@ export function Footer() {
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-blue-500" />
-                <span>support@shopez.com</span>
+                <Mail className="w-4 h-4 text-emerald-500" />
+                <span>support@shopeezz.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-blue-500" />
-                <span>1-800-SHOPEZ</span>
+                <Phone className="w-4 h-4 text-emerald-500" />
+                <span>1-800-SHOPEEZZ</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-blue-500" />
+                <MapPin className="w-4 h-4 text-emerald-500" />
                 <span>123 Commerce Street, NY 10001</span>
               </div>
             </div>
@@ -90,7 +90,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} ShopEZ. All rights reserved.
+            &copy; {currentYear} ShopEEZZ. All rights reserved.
           </p>
 
           <div className="flex items-center gap-4">

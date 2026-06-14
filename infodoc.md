@@ -1,6 +1,6 @@
-# ShopEZ — Project Architecture & Documentation
+# ShopEEZZ — Project Architecture & Documentation
 
-ShopEZ is a modern, full-stack e-commerce application designed with a clean separation of concerns using the **Model-View-Controller (MVC)** architectural pattern. It features a responsive React Single Page Application (SPA) on the frontend and a Node.js/Express API backed by MongoDB on the backend.
+ShopEEZZ is a modern, full-stack e-commerce application designed with a clean separation of concerns using the **Model-View-Controller (MVC)** architectural pattern. It features a responsive React Single Page Application (SPA) on the frontend and a Node.js/Express API backed by MongoDB on the backend.
 
 ---
 
@@ -119,9 +119,15 @@ The application is fully customized for Indian shoppers and store administrators
 ## 🎨 Creative Branding & Premium Design
 
 1. **Integrated Brand Logo (`client/src/components/common/Logo.tsx`)**:
-   - Features a custom vector design representing a shopping bag outline merged with a stylized Indian Rupee (`₹`) symbol.
-   - Accented with a modern Indian tricolor gradient (saffron-white-emerald) on the bag handle and dynamic gold-to-emerald gradient lettering on the logo brand name text.
+   - Features a custom vector design representing a fast shopping trolley emblem.
+   - Styled with a premium emerald green-to-teal gradient background, and highlighted with bright gold-amber accents.
+   - Logo typography matches the new identity: `Shop` (black/dark-gray, extra bold) and `EEZZ` (styled in a green-to-amber text gradient).
    - Implemented across the navigation header, footer, login page, and sign-up screens for brand uniformity.
+
+2. **UI Restructuring and Layout Shifts**:
+   - **Double-Row Header/Navbar**: Features a dark-emerald top mini-bar providing direct customer support information and local shipping benefits, with a clean bottom bar for brand identity, navigation links, and floating cart controls.
+   - **Circular Categories list**: Category navigation on the Homepage has been redesigned from a blocky rectangular grid to a horizontal scrollable strip of circular, border-highlighted badges.
+   - **Product Card Redesign**: Cards are framed with a thin gray border that highlights emerald green on hover. Cart submission uses a full-width bottom button instead of a small bottom-right icon, giving the grids a completely different geometric distribution.
 
 ---
 
@@ -130,7 +136,7 @@ The application is fully customized for Indian shoppers and store administrators
 ### 👤 Authentication
 - Users register with fullName, email, password, and phone number.
 - Passwords are encrypted using `bcryptjs`.
-- Successful logins return a signed JWT token, which is stored in the browser's `localStorage` and attached as a `Bearer` token header in consecutive REST requests.
+- Successful logins return a signed JWT token, which is stored in the browser's `localStorage` (key: `shopeezz_token`) and attached as a `Bearer` token header in consecutive REST requests.
 - Admins possess `role: 'admin'`, granting them access to secure `/admin` layouts on the frontend and REST routes protected by the `adminOnly` middleware on the server.
 
 ### 🛒 Cart & Checkout

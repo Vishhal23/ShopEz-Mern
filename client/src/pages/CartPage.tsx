@@ -31,7 +31,7 @@ export function CartPage() {
           <Link
             to="/login"
             state={{ from: { pathname: '/cart' } }}
-            className="inline-block px-8 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
+            className="inline-block px-8 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700"
           >
             Sign In
           </Link>
@@ -62,7 +62,7 @@ export function CartPage() {
             <p className="text-gray-500 mb-6">Looks like you haven't added anything to your cart yet</p>
             <Link
               to="/products"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg hover:bg-emerald-700"
             >
               Continue Shopping
               <ArrowRight className="w-4 h-4" />
@@ -96,7 +96,7 @@ export function CartPage() {
                   <div className="flex-1 min-w-0">
                     <Link
                       to={`/product/${item.product_id}`}
-                      className="font-medium text-gray-900 hover:text-violet-600 line-clamp-2"
+                      className="font-medium text-gray-900 hover:text-emerald-600 line-clamp-2"
                     >
                       {item.product.name}
                     </Link>
@@ -179,7 +179,7 @@ export function CartPage() {
 
                 <button
                   onClick={() => navigate('/checkout')}
-                  className="w-full mt-6 py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 flex items-center justify-center gap-2"
+                  className="w-full mt-6 py-3 bg-emerald-600 text-white font-medium rounded-lg hover:bg-emerald-700 flex items-center justify-center gap-2"
                 >
                   Proceed to Checkout
                   <ArrowRight className="w-4 h-4" />
@@ -187,13 +187,13 @@ export function CartPage() {
 
                 <Link
                   to="/products"
-                  className="block text-center mt-4 text-violet-600 hover:text-violet-700 text-sm"
+                  className="block text-center mt-4 text-emerald-600 hover:text-emerald-700 text-sm"
                 >
                   Continue Shopping
                 </Link>
 
                 {total < 500 && (
-                  <div className="mt-4 p-3 bg-violet-50 rounded-lg text-sm text-violet-800">
+                  <div className="mt-4 p-3 bg-emerald-50 rounded-lg text-sm text-emerald-800">
                     Add ₹{(500 - total).toFixed(2)} more for free shipping!
                   </div>
                 )}

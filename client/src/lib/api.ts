@@ -2,17 +2,17 @@ const API_BASE = '/api';
 
 // Get stored auth token
 function getToken(): string | null {
-  return localStorage.getItem('shopez_token');
+  return localStorage.getItem('shopeezz_token');
 }
 
 // Set auth token
 export function setToken(token: string): void {
-  localStorage.setItem('shopez_token', token);
+  localStorage.setItem('shopeezz_token', token);
 }
 
 // Remove auth token
 export function removeToken(): void {
-  localStorage.removeItem('shopez_token');
+  localStorage.removeItem('shopeezz_token');
 }
 
 // Generic API request helper
