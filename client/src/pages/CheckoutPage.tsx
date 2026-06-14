@@ -138,7 +138,7 @@ export function CheckoutPage() {
             <div className="flex gap-4 justify-center">
               <button
                 onClick={() => navigate('/orders')}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                className="px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
               >
                 View Orders
               </button>
@@ -166,7 +166,7 @@ export function CheckoutPage() {
             {/* Shipping Address */}
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="flex items-center gap-2 mb-6">
-                <MapPin className="w-5 h-5 text-blue-600" />
+                <MapPin className="w-5 h-5 text-violet-600" />
                 <h2 className="text-lg font-semibold text-gray-900">Shipping Address</h2>
               </div>
 
@@ -179,7 +179,7 @@ export function CheckoutPage() {
                     value={shippingAddress.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -192,7 +192,7 @@ export function CheckoutPage() {
                     onChange={handleInputChange}
                     required
                     placeholder="10-digit number"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -205,7 +205,7 @@ export function CheckoutPage() {
                     onChange={handleInputChange}
                     required
                     placeholder="6-digit code"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
                     maxLength={6}
                   />
                 </div>
@@ -219,7 +219,7 @@ export function CheckoutPage() {
                     onChange={handleInputChange}
                     required
                     placeholder="Street address"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -231,7 +231,7 @@ export function CheckoutPage() {
                     value={shippingAddress.city}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -243,7 +243,7 @@ export function CheckoutPage() {
                     value={shippingAddress.state}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
               </div>
@@ -256,7 +256,7 @@ export function CheckoutPage() {
               <div className="space-y-3">
                 <label
                   className={`flex items-center gap-4 p-4 border rounded-lg cursor-pointer transition-colors ${
-                    paymentMethod === 'cod' ? 'border-blue-600 bg-blue-50' : ' hover:bg-gray-50'
+                    paymentMethod === 'cod' ? 'border-violet-600 bg-violet-50' : ' hover:bg-gray-50'
                   }`}
                 >
                   <input
@@ -264,7 +264,7 @@ export function CheckoutPage() {
                     name="payment"
                     checked={paymentMethod === 'cod'}
                     onChange={() => setPaymentMethod('cod')}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-violet-600"
                   />
                   <Banknote className="w-5 h-5 text-gray-600" />
                   <div>
@@ -275,7 +275,7 @@ export function CheckoutPage() {
 
                 <label
                   className={`flex items-center gap-4 p-4 border rounded-lg cursor-pointer transition-colors opacity-50 ${
-                    paymentMethod === 'online' ? 'border-blue-600 bg-blue-50' : ''
+                    paymentMethod === 'online' ? 'border-violet-600 bg-violet-50' : ''
                   }`}
                 >
                   <input
@@ -283,7 +283,7 @@ export function CheckoutPage() {
                     name="payment"
                     checked={paymentMethod === 'online'}
                     onChange={() => setPaymentMethod('online')}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-violet-600"
                     disabled
                   />
                   <CreditCard className="w-5 h-5 text-gray-600" />
@@ -353,7 +353,7 @@ export function CheckoutPage() {
               <button
                 onClick={handlePlaceOrder}
                 disabled={loading}
-                className="w-full mt-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+                className="w-full mt-6 py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
               >
                 {loading ? (
                   <>

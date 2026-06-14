@@ -180,7 +180,7 @@ export function AdminProducts() {
         <h1 className="text-2xl font-bold text-gray-900">Products</h1>
         <button
           onClick={() => openModal()}
-          className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          className="flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
         >
           <Plus className="w-5 h-5" />
           Add Product
@@ -195,7 +195,7 @@ export function AdminProducts() {
             value={search}
             onChange={e => setSearch(e.target.value)}
             placeholder="Search products..."
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
           />
         </div>
       </div>
@@ -280,7 +280,7 @@ export function AdminProducts() {
                       <div className="flex items-center justify-end gap-2">
                         <button
                           onClick={() => openModal(product)}
-                          className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg"
+                          className="p-2 text-violet-600 hover:bg-violet-50 rounded-lg"
                         >
                           <Edit className="w-4 h-4" />
                         </button>
@@ -323,7 +323,7 @@ export function AdminProducts() {
                     value={formData.name}
                     onChange={e => setFormData({ ...formData, name: e.target.value })}
                     required
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -333,7 +333,7 @@ export function AdminProducts() {
                     value={formData.description}
                     onChange={e => setFormData({ ...formData, description: e.target.value })}
                     rows={3}
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -345,7 +345,7 @@ export function AdminProducts() {
                     value={formData.price}
                     onChange={e => setFormData({ ...formData, price: e.target.value })}
                     required
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -356,7 +356,7 @@ export function AdminProducts() {
                     step="0.01"
                     value={formData.discount_price}
                     onChange={e => setFormData({ ...formData, discount_price: e.target.value })}
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -365,7 +365,7 @@ export function AdminProducts() {
                   <select
                     value={formData.category_id}
                     onChange={e => setFormData({ ...formData, category_id: e.target.value })}
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
                   >
                     <option value="">Select category</option>
                     {categories.map(cat => (
@@ -380,7 +380,7 @@ export function AdminProducts() {
                     type="text"
                     value={formData.brand}
                     onChange={e => setFormData({ ...formData, brand: e.target.value })}
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -391,7 +391,7 @@ export function AdminProducts() {
                     value={formData.stock}
                     onChange={e => setFormData({ ...formData, stock: e.target.value })}
                     required
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -402,7 +402,7 @@ export function AdminProducts() {
                     onChange={e => setFormData({ ...formData, images: e.target.value })}
                     rows={3}
                     placeholder={"https://example.com/image1.jpg\nhttps://example.com/image2.jpg"}
-                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
               </div>
@@ -418,7 +418,7 @@ export function AdminProducts() {
                 <button
                   type="submit"
                   disabled={saving}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+                  className="flex items-center gap-2 px-4 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700 disabled:opacity-50"
                 >
                   {saving ? (
                     <>

@@ -8,7 +8,7 @@ import { LoadingSpinner } from '../components/common/LoadingSpinner';
 
 const statusColors: Record<string, string> = {
   pending: 'bg-yellow-100 text-yellow-800',
-  confirmed: 'bg-blue-100 text-blue-800',
+  confirmed: 'bg-violet-100 text-violet-800',
   packed: 'bg-purple-100 text-purple-800',
   shipped: 'bg-indigo-100 text-indigo-800',
   delivered: 'bg-green-100 text-green-800',
@@ -76,7 +76,7 @@ export function OrdersPage() {
           <p className="text-gray-500 mb-6">Sign in to track and manage your orders</p>
           <Link
             to="/login"
-            className="inline-block px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+            className="inline-block px-8 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
           >
             Sign In
           </Link>
@@ -101,7 +101,7 @@ export function OrdersPage() {
             <p className="text-gray-500 mb-6">Start shopping to see your orders here</p>
             <Link
               to="/products"
-              className="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              className="inline-block px-6 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
             >
               Start Shopping
             </Link>
@@ -142,7 +142,7 @@ export function OrdersPage() {
                         {statusSteps.map((step, index) => (
                           <span
                             key={step}
-                            className={statusSteps.indexOf(order.status) >= index ? 'text-blue-600 font-medium' : ''}
+                            className={statusSteps.indexOf(order.status) >= index ? 'text-violet-600 font-medium' : ''}
                           >
                             {step.charAt(0).toUpperCase() + step.slice(1)}
                           </span>
@@ -150,7 +150,7 @@ export function OrdersPage() {
                       </div>
                       <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
                         <div
-                          className="h-full bg-blue-600 transition-all duration-500"
+                          className="h-full bg-violet-600 transition-all duration-500"
                           style={{ width: `${getProgressPercentage(order.status)}%` }}
                         />
                       </div>

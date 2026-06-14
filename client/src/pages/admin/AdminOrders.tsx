@@ -7,7 +7,7 @@ import { Search, ChevronDown, Eye } from 'lucide-react';
 
 const statusColors: Record<string, string> = {
   pending: 'bg-yellow-100 text-yellow-800',
-  confirmed: 'bg-blue-100 text-blue-800',
+  confirmed: 'bg-violet-100 text-violet-800',
   packed: 'bg-purple-100 text-purple-800',
   shipped: 'bg-indigo-100 text-indigo-800',
   delivered: 'bg-green-100 text-green-800',
@@ -76,14 +76,14 @@ export function AdminOrders() {
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="Search by order ID..."
-              className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+              className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
             />
           </div>
           <div className="relative">
             <select
               value={statusFilter}
               onChange={e => setStatusFilter(e.target.value)}
-              className="appearance-none px-4 py-2 border rounded-lg pr-10 focus:ring-2 focus:ring-blue-500"
+              className="appearance-none px-4 py-2 border rounded-lg pr-10 focus:ring-2 focus:ring-violet-500"
             >
               <option value="">All Statuses</option>
               {statusOptions.map(status => (
@@ -150,7 +150,7 @@ export function AdminOrders() {
                       <td className="px-6 py-4 text-right">
                         <button
                           onClick={() => setSelectedOrder(order)}
-                          className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg"
+                          className="p-2 text-violet-600 hover:bg-violet-50 rounded-lg"
                         >
                           <Eye className="w-5 h-5" />
                         </button>
@@ -191,7 +191,7 @@ export function AdminOrders() {
                       onClick={() => updateStatus(selectedOrder.id, status as Order['status'])}
                       className={`px-3 py-1 text-sm rounded-lg border transition-colors ${
                         selectedOrder.status === status
-                          ? 'bg-blue-600 text-white border-blue-600'
+                          ? 'bg-violet-600 text-white border-violet-600'
                           : 'bg-white text-gray-700 hover:bg-gray-50'
                       }`}
                     >

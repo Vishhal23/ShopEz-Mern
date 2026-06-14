@@ -61,7 +61,7 @@ export function AdminUsers() {
             value={search}
             onChange={e => setSearch(e.target.value)}
             placeholder="Search users..."
-            className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500"
+            className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-violet-500"
           />
         </div>
       </div>
@@ -102,8 +102,8 @@ export function AdminUsers() {
                               className="w-10 h-10 rounded-full object-cover"
                             />
                           ) : (
-                            <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                              <span className="text-blue-600 font-medium text-sm">
+                            <div className="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center">
+                              <span className="text-violet-600 font-medium text-sm">
                                 {getUserInitials(user.full_name || user.fullName)}
                               </span>
                             </div>

@@ -121,7 +121,7 @@ export function ProductsPage() {
               <SlidersHorizontal className="w-4 h-4" />
               Filters
               {activeFilterCount > 0 && (
-                <span className="bg-blue-600 text-white text-xs px-2 py-0.5 rounded-full">
+                <span className="bg-violet-600 text-white text-xs px-2 py-0.5 rounded-full">
                   {activeFilterCount}
                 </span>
               )}
@@ -168,7 +168,7 @@ export function ProductsPage() {
                 {activeFilterCount > 0 && (
                   <button
                     onClick={clearFilters}
-                    className="text-sm text-blue-600 hover:text-blue-700"
+                    className="text-sm text-violet-600 hover:text-violet-700"
                   >
                     Clear all
                   </button>
@@ -182,7 +182,7 @@ export function ProductsPage() {
                     <button
                       onClick={() => updateFilters('category', null)}
                       className={`block w-full text-left text-sm ${
-                        !category ? 'text-blue-600 font-medium' : 'text-gray-600 hover:text-gray-900'
+                        !category ? 'text-violet-600 font-medium' : 'text-gray-600 hover:text-gray-900'
                       }`}
                     >
                       All Categories
@@ -193,7 +193,7 @@ export function ProductsPage() {
                         onClick={() => updateFilters('category', cat.name)}
                         className={`block w-full text-left text-sm ${
                           category === cat.name
-                            ? 'text-blue-600 font-medium'
+                            ? 'text-violet-600 font-medium'
                             : 'text-gray-600 hover:text-gray-900'
                         }`}
                       >
@@ -230,7 +230,7 @@ export function ProductsPage() {
                       type="checkbox"
                       checked={dealsOnly}
                       onChange={e => updateFilters('deals', e.target.checked ? 'true' : null)}
-                      className="w-4 h-4 text-blue-600 rounded"
+                      className="w-4 h-4 text-violet-600 rounded"
                     />
                     <span className="text-sm text-gray-700">Only Deals</span>
                   </label>
@@ -264,7 +264,7 @@ export function ProductsPage() {
                           }}
                           className={`block w-full text-left text-sm px-3 py-2 rounded-lg ${
                             category === cat.name
-                              ? 'bg-blue-50 text-blue-600 font-medium'
+                              ? 'bg-violet-50 text-violet-600 font-medium'
                               : 'text-gray-600 hover:bg-gray-50'
                           }`}
                         >
@@ -296,7 +296,7 @@ export function ProductsPage() {
 
                   <button
                     onClick={clearFilters}
-                    className="w-full py-2 text-blue-600 border border-blue-600 rounded-lg"
+                    className="w-full py-2 text-violet-600 border border-violet-600 rounded-lg"
                   >
                     Clear All Filters
                   </button>
@@ -310,7 +310,7 @@ export function ProductsPage() {
             {activeFilterCount > 0 && (
               <div className="flex flex-wrap gap-2 mb-4">
                 {search && (
-                  <span className="flex items-center gap-1 px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full">
+                  <span className="flex items-center gap-1 px-3 py-1 bg-violet-50 text-violet-700 text-sm rounded-full">
                     Search: {search}
                     <button onClick={() => updateFilters('search', null)}>
                       <X className="w-3 h-3" />
@@ -318,7 +318,7 @@ export function ProductsPage() {
                   </span>
                 )}
                 {category && (
-                  <span className="flex items-center gap-1 px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full">
+                  <span className="flex items-center gap-1 px-3 py-1 bg-violet-50 text-violet-700 text-sm rounded-full">
                     {category}
                     <button onClick={() => updateFilters('category', null)}>
                       <X className="w-3 h-3" />
@@ -326,7 +326,7 @@ export function ProductsPage() {
                   </span>
                 )}
                 {dealsOnly && (
-                  <span className="flex items-center gap-1 px-3 py-1 bg-blue-50 text-blue-700 text-sm rounded-full">
+                  <span className="flex items-center gap-1 px-3 py-1 bg-violet-50 text-violet-700 text-sm rounded-full">
                     Deals Only
                     <button onClick={() => updateFilters('deals', null)}>
                       <X className="w-3 h-3" />
@@ -352,7 +352,7 @@ export function ProductsPage() {
                 <p className="text-gray-400 mt-2">Try adjusting your filters</p>
                 <button
                   onClick={clearFilters}
-                  className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                  className="mt-4 px-6 py-2 bg-violet-600 text-white rounded-lg hover:bg-violet-700"
                 >
                   Clear Filters
                 </button>

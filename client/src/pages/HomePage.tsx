@@ -84,12 +84,12 @@ export function HomePage() {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-lg">
-            <span className="inline-block px-4 py-1 bg-blue-600 text-sm font-medium rounded-full mb-4">
+            <span className="inline-block px-4 py-1 bg-violet-600 text-sm font-medium rounded-full mb-4">
               New Arrivals
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Shop the Best <br />
-              <span className="text-blue-400">Quality Products</span>
+              <span className="text-violet-400">Quality Products</span>
             </h1>
             <p className="text-gray-300 text-lg mb-8">
               Discover amazing deals on electronics, fashion, home appliances, and more.
@@ -98,7 +98,7 @@ export function HomePage() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/products"
-                className="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+                className="px-8 py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition-colors flex items-center gap-2"
               >
                 Shop Now
                 <ChevronRight className="w-5 h-5" />
@@ -120,8 +120,8 @@ export function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map(feature => (
               <div key={feature.title} className="flex items-center gap-4">
-                <div className="p-3 bg-blue-50 rounded-lg">
-                  <feature.icon className="w-6 h-6 text-blue-600" />
+                <div className="p-3 bg-violet-50 rounded-lg">
+                  <feature.icon className="w-6 h-6 text-violet-600" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">{feature.title}</h3>
@@ -143,7 +143,7 @@ export function HomePage() {
             </div>
             <Link
               to="/products"
-              className="text-blue-600 font-medium hover:text-blue-700 flex items-center gap-1"
+              className="text-violet-600 font-medium hover:text-violet-700 flex items-center gap-1"
             >
               View All
               <ChevronRight className="w-4 h-4" />
@@ -207,7 +207,7 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center gap-3">
-              <TrendingUp className="w-8 h-8 text-blue-600" />
+              <TrendingUp className="w-8 h-8 text-violet-600" />
               <div>
                 <h2 className="text-2xl font-bold text-gray-900">Top Rated Products</h2>
                 <p className="text-gray-500">Most loved by our customers</p>
@@ -215,7 +215,7 @@ export function HomePage() {
             </div>
             <Link
               to="/products?sort=rating"
-              className="text-blue-600 font-medium hover:text-blue-700 flex items-center gap-1"
+              className="text-violet-600 font-medium hover:text-violet-700 flex items-center gap-1"
             >
               View All
               <ChevronRight className="w-4 h-4" />
@@ -241,11 +241,11 @@ export function HomePage() {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="flex-1 px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-violet-500"
             />
             <button
               type="submit"
-              className="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-8 py-3 bg-violet-600 text-white font-medium rounded-lg hover:bg-violet-700 transition-colors"
             >
               Subscribe
             </button>
