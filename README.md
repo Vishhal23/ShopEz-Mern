@@ -6,8 +6,8 @@ ShopEZ is a modern, full-stack e-commerce application designed and structured wi
 
 ### 🏠 Homepage (Hero Section)
 ![Homepage Hero](screenshots/homepage_hero.png)
+### 📝 Sign-Up & Register Page (with Custom Rupee Logo)
 
-### 🏷️ Homepage (Categories & Deals)
 ![Homepage Deals](screenshots/homepage_deals.png)
 
 ### 📝 Sign-Up & Register Page (with Custom Rupee Logo)
