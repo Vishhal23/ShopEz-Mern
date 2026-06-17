@@ -171,12 +171,5 @@ npm run dev        # Starts Vite dev server on http://localhost:5173
 
 ---
 
-## 📄 Project Documentation
 
-Detailed project phase documents are located in the `Shop EZ DOCS/` folder. This includes:
-- **Requirements Analysis Phase**
-- **Project Planning Phase**
-- **Project Design Phase**
-- **Project Development Phase**
-- **Brainstorming & Ideation Phase**
-- **Comprehensive Project Report**: Available in Word format at `Shop EZ DOCS/DOCUMENTATION/ShopEZ_Documentation.docx`.
+
