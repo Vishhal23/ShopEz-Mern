@@ -1,7 +1,7 @@
 {
-  "name": "shopeezz-server",
+  "name": "shopez-server",
   "version": "1.0.0",
-  "description": "ShopEEZZ E-commerce Backend API",
+  "description": "ShopEZ E-commerce Backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

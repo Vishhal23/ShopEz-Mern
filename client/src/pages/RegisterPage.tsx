@@ -64,7 +64,7 @@ export function RegisterPage() {
             </Link>
           </div>
           <h1 className="text-3xl font-bold text-gray-900">Create Account</h1>
-          <p className="text-gray-600 mt-2">Join ShopEEZZ today</p>
+          <p className="text-gray-600 mt-2">Join ShopEZ today</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-lg p-8">

@@ -50,20 +50,6 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      {/* Top Mini-Bar */}
-      <div className="bg-emerald-950 text-emerald-100 text-xs py-2 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <span>📞 Support: 1800-BZR-EXPR</span>
-            <span className="hidden sm:inline text-emerald-800">|</span>
-            <span className="hidden sm:inline">🇮🇳 India</span>
-          </div>
-          <div className="text-center sm:text-right font-medium">
-            🚚 Free shipping on orders over ₹500!
-          </div>
-        </div>
-      </div>
-
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
