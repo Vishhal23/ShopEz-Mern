@@ -2,6 +2,17 @@
 
 ShopEZ is a modern, full-stack e-commerce application designed and structured with a clean separation of concerns using the **Model-View-Controller (MVC)** architectural pattern. The project is fully localized for Indian users and administrators, featuring a responsive React single-page frontend and a robust Node.js/Express API backed by MongoDB.
 
+## 📸 Screenshots
+
+### 🏠 Homepage (Hero Section)
+![Homepage Hero](screenshots/homepage_hero.png)
+
+### 🏷️ Homepage (Categories & Deals)
+![Homepage Deals](screenshots/homepage_deals.png)
+
+### 📝 Sign-Up & Register Page (with Custom Rupee Logo)
+![Register Page](screenshots/register_page.png)
+
 ---
 
 ## 🛠️ Technology Stack
